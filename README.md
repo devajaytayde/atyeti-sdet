@@ -1,4 +1,4 @@
 # atyeti-sdet
 Atyeti SDET Training
 
-EST work is done
+IST work is done
