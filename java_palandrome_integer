@@ -1,0 +1,60 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.lang.Math;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Number Pallandrome using non-recurison");
+		int num = -12221;
+        //7557%10 = 7 & 7557 / 10 = 755 i.e. round(755.7) ,  
+        //755%10 = 5, 755/10 = 75 
+        //75%10 = 5, 75/10 = 7
+        //7%10 = 0 , 7/10  = 0
+        int reverse = rev(num);
+        System.out.println("Reverse of: " + num + " is: " + reverse);
+        if(num ==reverse)
+            System.out.println("& it is a Palandrome Integer.");
+        else
+            System.out.println("& it is Non-Palandrome Integer.");
+            
+	}
+	public static int rev(int num)
+	{
+	    int tempnum = num;          
+	    int temprev = 0;            
+	    int nth =(int)checkIntLength(num);         
+	    //System.out.println(tempnum + " and length-" + nth);
+	    while(tempnum%10!=0)        
+	    {
+	    	     
+	     temprev  = ((tempnum%10) * nth) + temprev;      //7*1000 + 0 = 7000, 5*100 + 7000 = 7500, 5*10+7500=7550,   
+	     //System.out.println(temprev);
+	    
+ 	     tempnum = tempnum/10;
+         //System.out.println(tempnum);
+
+	     thousand = thousand/10;            //100
+	    }
+	    return temprev;
+	    
+	    
+	}
+	public static double checkIntLength(int num)
+	{
+	    double count = 0;
+	    double ten = 10;
+	    while(num%10!=0)         //1*10)
+	    {
+	        
+	        //System.out.println(num);
+	        num = num/10;
+	        count = count + 1;      //
+	    }
+	    return Math.pow(ten,count-1);
+	}
+}
