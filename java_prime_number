@@ -1,0 +1,59 @@
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		
+		int num = 444112; 
+		
+		if (!isPrime(num))
+		{
+		    System.out.println("Prime - " + num);
+		}
+	}
+
+  public static boolean isPrime(int num)
+  {
+    boolean flag = false;
+        for(int i = 2; i < 17 ; i ++ )
+    		{
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		
+		int num = 12; 
+		
+		if (isPrime(num))
+		{
+		    System.out.println("Non-Prime - " + num);
+		}
+		else
+		{
+		    System.out.println("Prime - " + num);
+		}
+	}
+
+  public static boolean isPrime(int num)
+  {
+    boolean flag = false;
+        for(int i = 2; i < num ; i ++ )
+    		{
+    		    if(num%i==0)
+    		    {
+    		        flag  = true;
+    		        break;
+    		    }
+    		}
+    return flag;  
+}
+}
+
+    		    if(num%i==0)
+    		    {
+    		        flag  = true;
+    		    }
+    		}
+    return flag;  
+}
+}
