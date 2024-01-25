@@ -1,0 +1,21 @@
+/******************************************************************************
+
+                            Swap values of two variables without direct reassignment and without creating any extra variables.
+
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) {
+		int x = 25;
+		int y = 10;
+		System.out.println("X-" + x + " and Y-"+ y);
+		
+		x = x  - y ;    //25-10 = 15
+		y = x + y  ;    //15+10 = 25  --> done
+		x = y - x  ;    //25 - 15 = 10  --> done
+		
+		System.out.println("X-" + x + " and Y-"+ y);
+	}
+}
+  
