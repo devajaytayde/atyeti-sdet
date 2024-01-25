@@ -1,0 +1,64 @@
+/******************************************************************************
+
+    Two-string anagram for ex. TRIANGLE = INTEGRAL - > TRUE , 
+                            BEST = REST - > FALSE
+    
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) {
+	    String str1  = "aBC1";
+	    String str2  = "1CBa";
+	    
+	    char[] chr1 = sort(str1);
+	    char[] chr2 = sort(str2);
+	    
+	    String strx = new String(chr1);
+	    String stry = new String(chr2);
+	    System.out.println("X-" + str1 + " and Y-"+ str2);
+        System.out.println("new X-" + strx + " and new Y-"+ stry);
+
+	    
+	    if (strx.equals(stry))
+	    {
+	        System.out.println("Pass- Two strings are Anagram");
+	    }
+        else
+        {
+            System.out.println("Fail- Two strings are not Anagram");
+        }
+	    
+	    
+	}
+	
+	public static char[] sort(String str)
+    {
+        	    //Sort an string without using Sort Function 
+	    int len = str.length();
+	    char[] chr = new char[len];
+	    
+	    int i = 0;
+	      int m = 0;
+	    for(char ch = '0'; ch <= 'z'; ch++)         //A, B, C, D, E, F, G, H, I , J , K .  . . .. 
+	    { 
+	        
+	        //System.out.println(ch);
+	        
+	        for(int k =0 ; k < len; k ++ )                //
+	        {    
+	          
+	            if( ch==str.charAt(k))                   // B==I, B==M, B==B then chr1[]
+	            {
+    	            chr[m] = ch;                          
+    	            m = m + 1;
+    	            
+    	        }
+	        }
+	        
+	        
+	    }
+	    
+        return chr;
+    }
+}
