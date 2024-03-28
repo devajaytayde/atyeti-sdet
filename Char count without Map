@@ -1,0 +1,35 @@
+/******************************************************************************
+
+       Find Number of Count of Character in String  (Without Using MAP)
+                 For ex. TITANIUM
+                 T - 2
+                 I - 2
+                 A - 1
+                 N - 1
+                 U - 1
+                 M - 1
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) {
+	    String word = "TITANIUM";
+	    char[] charArr = word.toCharArray();
+		int[][] charCount = new int[7][1];          //[7][1]    
+		int k = 0;
+		for (int i=0; i < word.length(); i ++)
+		{
+		    for(int j = i ; j < word.length(); j++)
+		    {
+		        
+		        charCount[k][0] = charArr[i];                   //[0][0] = T
+		        if(charArr[i]==charArr[j])
+		        {
+		            charCount[k][1] = charCount[k][1] + 1;              //[0][1] = 0 + 1
+		        }
+		        
+		    }
+		}
+		
+	}
+}
