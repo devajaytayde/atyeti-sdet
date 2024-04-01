@@ -2,7 +2,34 @@
 
                  Print "HELLO GOOD MORNING" to 
                             "MORNING GOOD HELLO"
+*****************************************/******************************************************************************
+
+                 Print "HELLO GOOD MORNING" to 
+                            "MORNING GOOD HELLO"
 *******************************************************************************/
+import java.io.*;
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		    
+		//Set the string array 
+		String str  = "HELLO GOOD MORNING";
+		//Split the string in java
+		String[] strbreak = str.split(" ");
+		String[] newRev = new String[strbreak.length];
+		int count = 0;
+		for(int i  = strbreak.length-1; i >= 0 ; i --)
+		{
+		    
+		 newRev[count] = strbreak[i]  + " ";
+		}
+		String rev = Arrays.toString(strbreak);
+		System.out.println("Final reverse is " +  rev);
+	}
+}
+**************************************/
 
 public class Main
 {
