@@ -1,0 +1,41 @@
+/******************************************************************************
+
+                 Print "HELLO GOOD MORNING" to 
+                            "MORNING GOOD HELLO"
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) {
+		    
+		//Set the string array 
+		String str  = "HELLO GOOD MORNING";
+		String rev = "";
+		//Break the string into array char
+		char[] arr  = str.toCharArray();
+		
+		//Now traverse with back of the keywords 
+		//and if there is space , count the number of Index
+		//for ex. HELLO so index is 5 where space is there 
+		// so we will only fetch those string in new temp string
+		int init = 0;
+		int fin = 0;
+		
+		for (int i=0; i < arr.length; i++)
+		{   fin = i; 
+		    if(arr[i]==' ')
+		    {
+		        rev = str.substring(init,fin) + ' ' + rev; 
+		        init = fin;
+		    }
+		    if(i==arr.length-1)
+		    {
+		        fin = i+1;
+		        rev = str.substring(init,fin) + ' ' + rev; 
+		        
+		    }
+		}
+		
+		System.out.println("Final reverse is " + rev);
+	}
+}
