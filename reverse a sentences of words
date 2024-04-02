@@ -2,14 +2,12 @@
 
                  Print "HELLO GOOD MORNING" to 
                             "MORNING GOOD HELLO"
-*****************************************/******************************************************************************
 
-                 Print "HELLO GOOD MORNING" to 
-                            "MORNING GOOD HELLO"
 *******************************************************************************/
 import java.io.*;
 import java.util.*;
 
+//Aproach 1
 public class Main
 {
 	public static void main(String[] args) {
@@ -30,10 +28,10 @@ public class Main
 	}
 }
 **************************************/
-
-public class Main
+//Approach 2
+public class Main2
 {
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		    
 		//Set the string array 
 		String str  = "HELLO GOOD MORNING";
