@@ -1,0 +1,17 @@
+/*****************************************************************************
+ * 
+ * WAP to Concatenate Characters From Each String [{“Rama”, “Test”, “Type”, “Tata”} –
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) {
+		String[] arr = {"TATA", "MAHINDRA", "SUZUKI", "FORCE"};
+		String temp = "";
+		for (int i = 0 ; i < arr.length; i++)
+		{
+		    temp = temp + arr[i].substring(0,1);
+		}
+		System.out.println(temp);
+	}
+}
