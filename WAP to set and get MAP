@@ -1,0 +1,38 @@
+/******************************************************************************
+
+                    WAP Char count with  Map
+                    String str = "RETROSPECTIVE"
+                    R - 2
+                    E - 3
+                    T - 2
+                    O - 1
+                    S - 1
+                    C - 1
+                    V - 1
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		String str = "RETROSPECTIVE";
+		Map<String, Integer> mp = new HashMap<String, Integer>();
+		mp.put("1",10000);
+		mp.put("2",20000);
+		mp.put("3",30000);
+		Iterator itr = mp.entrySet().iterator();
+		while(itr.hasNext())
+		{
+	        //Get whole Key Value Pair
+		    //System.out.println(itr.next());
+		    
+		    //To iterator Key and Value different
+		    Map.Entry me = (Map.Entry)itr.next();
+		    String key = me.getKey().toString();
+		    int val = (int)me.getValue();
+		    System.out.println("Key:" + key + " Value:" + val);
+		    
+		    
+		}
+		
+	}
+}
