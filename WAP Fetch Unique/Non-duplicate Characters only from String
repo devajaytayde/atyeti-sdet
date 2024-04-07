@@ -1,0 +1,56 @@
+/******************************************************************************
+
+                    WAP Fetch Unique/ Non-duplicate Characters only from String
+                    String str = "RETROSPECTIVE"
+                    R - 2
+                    E - 3
+                    T - 2
+                    O - 1
+                    S - 1
+                    C - 1
+                    V - 1
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		String str = "RETROSPECTIVE";
+		Map<Character, Integer> mp = new LinkedHashMap();
+		char[] arr = str.toCharArray();
+		
+		//Get each char and its count
+    	
+		for(int i  =0 ; i < arr.length ; i++ )          
+		{
+		    mp.put(arr[i],0);                           
+		    for(int j=i+1; j< arr.length; j++)              
+		    {
+		        int count = 0;                          
+		        if ( arr[i]!=arr[j] && !mp.containsKey(arr[i]))         
+		        {
+		            
+		       //      count  = mp.get(arr[j]);                       //count = arr[j] = 0
+		       //      count = count + 1;                             // count = 0 + 1
+		             mp.put(arr[j],count);                          // (E,1)
+		        }
+		    }
+		}
+		
+		//Get print of Map 
+		Iterator itr = mp.entrySet().iterator();
+		while(itr.hasNext())
+		{
+	        //Get whole Key Value Pair
+		    //System.out.println(itr.next());
+		    
+		    //To iterator Key and Value different
+		    Map.Entry me = (Map.Entry)itr.next();
+		    String key = me.getKey().toString();
+		    int val = (int)me.getValue();
+		    System.out.println("Key:" + key + " Value:" + val);
+		    
+		    
+		}
+		
+	}
+}
