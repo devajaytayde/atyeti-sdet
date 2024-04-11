@@ -1,0 +1,52 @@
+/******************************************************************************
+            WAP SingleTon Class Pattern
+*******************************************************************************/
+public class Main
+{
+    public static int count = 1;
+    public static Main instance;
+    public  String str;
+    public Main()
+    {
+        System.out.println("Main Constructor Initated " + count);
+        str = "ABCDE"+count;
+        count = count + 1;
+        
+    }
+    
+    public static Main getInstance()
+    {
+        if(count==1)
+        {
+             instance = new Main();
+             System.out.println("getInstance called " + count); 
+        }
+        
+          return instance;    
+        
+    }
+    
+    public static void main(String[] args)
+    {
+        Main mn = getInstance();
+        System.out.println(mn.str);
+        Main mn1 = getInstance();
+        System.out.println(mn1.str);
+        Main mn2= getInstance();
+        System.out.println(mn2.str);
+        Main mn3 = getInstance();
+        System.out.println(mn3.str);
+        
+        if(mn == mn1)
+        {System.out.println("mn object is refering to mn1");}
+        
+        if(mn1 == mn2)
+        {System.out.println("mn1 object is refering to mn2");}
+        
+        if(mn2 == mn3)
+        {System.out.println("mn2 object is refering to mn3");}
+        
+        if(mn3 == mn1)
+        {System.out.println("mn3 object is refering to mn1");}
+    }
+}
