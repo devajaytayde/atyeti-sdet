@@ -1,0 +1,29 @@
+/******************************************************************************
+
+        WAP to find consecutive duplicates only
+        
+        arr1 = 2, 5, 5, 6, 7, 8, 8, 2
+        output = 5, 8 
+        
+*******************************************************************************/
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		int[] arr = {2, 5, 5, 6, 7,7,7,7,7, 8, 8, 2};
+		Set<Integer> hst = new HashSet<Integer>();
+		int dup = 0;
+		
+		for(int i = 0 ; i < arr.length -1; i++)
+		{
+		    if(arr[i]==arr[i+1] && dup != arr[i])
+		    {
+		        dup = arr[i];
+		        System.out.println("Consecutive Number:" + dup);
+		    }
+		}
+	    
+	    
+	}
+}
