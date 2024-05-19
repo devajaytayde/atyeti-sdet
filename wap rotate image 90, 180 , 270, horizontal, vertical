@@ -1,0 +1,28 @@
+/******************************************************************************
+
+
+        rotate image or two  d array  by 90 degree
+        5 2             8 5               //10  00
+        8 4             4 2              // 11  01 
+ 
+        rotate image or two  d array  by 180 degree
+        5 2             4 8               //11 10           
+        8 4             2 5              // 01 00   
+        
+        flip image of two d array by vertical
+        7  6  3           3  6  7
+        5  4  8           8  4  5
+        1  2  9           9  2  1
+        
+        flip image of two d array by vertical
+        
+*******************************************************************************/
+public class Main
+{
+	public static void main(String[] args){
+	   
+	// flip image of two d array by vertical
+	
+	
+	}
+}
