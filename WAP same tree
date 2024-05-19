@@ -1,0 +1,25 @@
+/******************************************************************************
+
+        same tree
+
+*******************************************************************************/
+public class Main
+{
+	public static void main(String[] args) {
+		int[] arr1  = {1,2,3};
+		int[] arr2  = {1,1,3};
+		boolean flag= true;
+		for(int i = 0 ; i < arr1.length; i ++ )
+		{
+		    if(arr1[i]!=arr2[i])
+		    {    
+		        flag = false;
+		        break;
+		    }
+		}
+		if(flag==false)
+		    System.out.println("Tree are NOT same");
+		else
+		    System.out.println("Tree are same");
+	}
+}
