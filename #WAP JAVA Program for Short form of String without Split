@@ -1,0 +1,82 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		literal();
+	}
+	
+	public static void literal()
+	{
+	    //String str1 = "Member of the Legislative Assembly";         // MLA
+	    //String str1 = "Grand de tour";                              //GDT
+	    String str1 = "In Java, Substring is a part of a String or";                              //JSpS
+	    
+	    char[] chr = str1.toCharArray();
+	    String result = "";
+	    //1..Without split
+	    //Serach for first space, trim it , put it in array, check if string is not "OR, OF, AND, THE, IN, ON, TO
+	    int startIndex = 0;
+	    int endIndex = 0;
+	    String temp = "";
+	    boolean flag = true;
+	    for(int j = 0 ; j < chr.length; j++)
+	    {
+	        if(chr[j]==' ')
+	        {
+	           endIndex = j;
+	           temp =  str1.substring(startIndex,endIndex-1); //0, 
+	           //check if temp is in restricted keywords
+	           flag = checkKeyword(temp);
+	           if(flag==false)
+	           {
+	               result = result + temp.substring(0,1);
+	           }
+	           startIndex = j-1;
+	        }
+	        
+	    }
+	    System.out.println("Interim word" + result);
+	}
+	    
+	    public static boolean checkKeyword(String test)
+	    {   
+	        System.out.println(test);
+	        boolean flag = true;
+	        switch (test.toUpperCase())
+	            {
+	                case "OF":
+	                    break;
+	                case "OR":
+	                    break;
+	                case "AND":
+	                    break;
+	                case "THE":
+	                    break;
+	                case "IN":
+	                    break;
+	                case "ON":
+	                    break;
+	                case "TO":
+	                    break;
+	                case "IS":
+	                    break;
+	                case "A":
+	                    break;
+	                default:
+	                    flag = false; 
+	            }
+	            return flag;
+	    }
+	    
+
+}
+
+
